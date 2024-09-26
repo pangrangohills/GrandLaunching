@@ -4,13 +4,9 @@ document.getElementById("pushdata").onclick = function (e) {
   let notelp = document.getElementById("numbers").value;
   let agent = document.getElementById("agent").value;
 
-  var qr =
-    name +
-    " - " +
-    notelp +
-    " - SELAMAT ANDA BERHAK MENDAPATKAN DISCOUNT SPESIAL 10 JUTA Di Acara Grand Launching The Pangrango Hills SdanK";
+  var qr = "TPH-" + name + "-" + agent;
   genQr(qr);
-  alert("Success! Qr");
+  alert("Success! Silahkan Tekan & Tahan QR code Untuk mendownload!");
   let datas = `Nama : ${name} Domisili : ${domi} No Telpon : ${notelp} Agent/Marketing : ${agent}`;
   var token = "7655916759:AAFN33QwRoKdN4XccJ41bvnGttIpyBVVJkI";
   var chat_id = "-4573752069";
@@ -20,6 +16,7 @@ document.getElementById("pushdata").onclick = function (e) {
   let api = new XMLHttpRequest();
   api.open("GET", url, true);
   api.send();
+  alert("Success! Silahkan Tekan & Tahan QR code Untuk mendownload!");
   alert("Success! Registration !");
 };
 let imgBox = document.getElementById("imgBox");
