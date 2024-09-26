@@ -4,8 +4,14 @@ document.getElementById("pushdata").onclick = function (e) {
   let notelp = document.getElementById("numbers").value;
   let agent = document.getElementById("agent").value;
 
+  var qr =
+    name +
+    " - " +
+    notelp +
+    " - SELAMAT ANDA BERHAK MENDAPATKAN DISCOUNT SPESIAL 10 JUTA Di Acara Grand Launching The Pangrango Hills SdanK";
+  genQr(qr);
+  alert("Success! Qr");
   let datas = `Nama : ${name} Domisili : ${domi} No Telpon : ${notelp} Agent/Marketing : ${agent}`;
-
   var token = "7655916759:AAFN33QwRoKdN4XccJ41bvnGttIpyBVVJkI";
   var chat_id = "-4573752069";
 
@@ -14,9 +20,7 @@ document.getElementById("pushdata").onclick = function (e) {
   let api = new XMLHttpRequest();
   api.open("GET", url, true);
   api.send();
-
-  let qr = `${name} ${domi} ${notelp} - SELAMAT ANDA BERHAK MENDAPATKAN DISCOUNT SPESIAL 10 JUTA Di Acara Grand Launching The Pangrango Hills SdanK`;
-  genQr(qr);
+  alert("Success! Registration !");
 };
 let imgBox = document.getElementById("imgBox");
 let qrImg = document.getElementById("qrImg");
